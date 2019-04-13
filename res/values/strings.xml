@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">设备测试</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Activity title -->
+    <string name="sp_list_title">设备测试</string>
+    <string name="sp_uart_test">串口测试</string>
+    <string name="sp_qr_test">扫描测试</string>
+    <string name="sp_psam_test">Psam测试</string>
+    <string name="sp_key_test">按键测试</string>
+    <string name="sp_rfid_test">RFID测试</string>
+    <string name="sp_identity_test">二代证测试</string>
+    <string name="sp_nfc_test">NFC测试</string>
+    <string name="sp_version_info">版本信息</string>
+
+    <!-- Prefrence key -->
+    <string name="key_uart_test">key_uart_test</string>
+    <string name="key_qr_test">key_qr_test</string>
+    <string name="key_psam_test">key_psam_test</string>
+    <string name="key_key_test">key_key_test</string>
+    <string name="key_rfid_test">key_rfid_test</string>
+    <string name="key_nfc_test">key_nfc_test</string>
+    <string name="key_identity_test">key_identity_test</string>
+    <string name="key_version_info">key_version_info</string>
+    <string name="str_version_info">软件版本v1.0</string>
+    <string name="str_determine">确定</string>
+    <string name="str_cancel">取消</string>
+    <string name="str_exit">退出</string>
+
+    <!-- uart test -->
+    <string name="auto_send">自动发送</string>
+    <string name="low">Write Low</string>
+    <string name="high">Write High</string>
+    <string name="uart_spinner_prompt">选择串口</string>
+    <string name="baudrate_spinner_prompt">选择波特率</string>
+    <string name="format_spinner_prompt">选择字符显示格式</string>
+    <string name="receiverd_data">接收数据区</string>
+    <string name="send_msg_bt">发送数据</string>
+    <string name="is_empty">Text is Empty</string>
+    <string name="test_text">123456ABCDEFG</string>
+    <string name="send">send:</string>
+    <string name="received">received:</string>
+    <string name="send_byte">Send Byte</string>
+    <string name="write_failure">Send Data failure!</string>
+    <string name="title_activity_uart_test">串口测试</string>
+    <string name="title_activity_nfc_test">NFC测试</string>
+    <string name="title_activity_psam_test">Psam卡测试</string>
+    <string name="title_activity_qr_test">二维码测试</string>
+    <string name="title_activity_rfid_test">RFID测试</string>
+    <string name="title_activity_key_test">按键测试</string>
+
+    <!-- QR test -->
+    <string name="apdu">执行APDU</string>
+    <string name="power_on">Psam上电</string>
+    <string name="power_off">Psam下电</string>
+
+    <!-- RFID String -->
+    <string name="connect">connect MCU</string>
+    <string name="id">ID</string>
+    <string name="count">count</string>
+    <string name="inventory">Start Inventory</string>
+    <string name="stop_inventory">Stop Inventory</string>
+    <string name="clear">clear</string>
+    <string name="membank">Membank</string>
+    <string name="accesspassword">Access Password</string>
+    <string name="addr">Address(word)</string>
+    <string name="len">Length(word)</string>
+    <string name="read">Read Tag</string>
+    <string name="write">Write Tag</string>
+    <string name="writedata">Write Data(HEX)</string>
+    <string name="locktype">Lock Type</string>
+    <string name="locktag">Lock Tag</string>
+    <string name="kill">Kill Tag</string>
+    <string name="killpassword">Kill Password</string>
+    <string name="readdata">Read Data</string>
+    <string name="back">Back</string>
+    <string name="parameterSetting">Parameter Setting</string>
+    <string name="sensitivity">Sensitivity</string>
+    <string name="set">set</string>
+    <string name="rfPower">RF power</string>
+    <string name="workArea">Work Area</string>
+    <string name="freqSetting">Freq setting</string>
+    <string name="china2Freq">China2：920125kHz~924875kHz</string>
+    <string name="usaFreq">USA：902250kHz~927750kHz</string>
+    <string name="euFreq">Europe：865100kHz~867900kHz</string>
+    <string name="china1Freq">China1：840125kHz~844875kHz</string>
+    <string name="koreaFreq">Korea：917700kHz~923300kHz</string>
+    <string name="setSuccess">Set success</string>
+    <string name="freqNotNull">Frequency not null</string>
+
+</resources>

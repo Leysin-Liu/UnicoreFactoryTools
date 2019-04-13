@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.unicore.ui.MainActivity" >
+    
+    <ScrollView 
+	    android:id="@+id/qr_scrollView"
+	    android:layout_width="match_parent"
+	    android:layout_weight="5"
+	    android:layout_height="0dp"
+	    android:layout_marginBottom="20dp"
+	    >
+	    
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    
+	</ScrollView>
+    
+    
+    <Button 
+        android:text="清空内容"
+        android:id="@+id/clearContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    
+    <Button 
+        android:text="开始扫描"
+        android:id="@+id/startScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    
+</LinearLayout>

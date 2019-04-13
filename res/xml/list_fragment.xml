@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <PreferenceCategory 
+        android:key="root_preference"
+        android:title="@string/sp_list_title" >
+
+		 <!-- 串口测试 -->
+        <PreferenceScreen
+            android:icon="@drawable/ic_uart"
+            android:key="@string/key_uart_test"
+            android:title="@string/sp_uart_test" />
+        
+         <!-- 扫描测试 -->
+        <PreferenceScreen
+            android:icon="@drawable/ic_qr"
+            android:key="@string/key_qr_test"
+            android:title="@string/sp_qr_test" />
+        
+        <!-- 按键测试 -->
+        <PreferenceScreen
+             android:icon="@drawable/ic_key"
+            android:key="@string/key_key_test"
+            android:title="@string/sp_key_test" />
+
+        <!-- NFC测试 -->
+        <PreferenceScreen
+             android:icon="@drawable/ic_nfc"
+            android:key="@string/key_nfc_test"
+            android:title="@string/sp_nfc_test" />
+        
+         <!-- PSAM 测试 -->
+        <PreferenceScreen
+             android:icon="@drawable/ic_psam"
+            android:key="@string/key_psam_test"
+            android:title="@string/sp_psam_test" />
+        
+         <!--　RFID 测试 -->
+        <PreferenceScreen
+             android:icon="@drawable/ic_rfid"
+            android:key="@string/key_rfid_test"
+            android:title="@string/sp_rfid_test" />
+        
+        <!--　二代证 测试 -->
+        <PreferenceScreen
+            android:icon="@drawable/ic_identity"
+            android:key="@string/key_identity_test"
+            android:title="@string/sp_identity_test" />
+        
+         <!-- 版本信息 -->
+        <PreferenceScreen
+             android:icon="@drawable/ic_version"
+            android:key="@string/key_version_info"
+            android:title="@string/sp_version_info" />
+        
+    </PreferenceCategory>
+
+</PreferenceScreen>

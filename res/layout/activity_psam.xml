@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.unicore.ui.MainActivity" >
+    
+	 <ScrollView 
+	    android:id="@+id/psam_scrollView"
+	    android:layout_width="match_parent"
+	    android:layout_weight="5"
+	    android:layout_height="0dp"
+	    android:layout_marginBottom="20dp"
+	    >
+	    
+    <TextView
+        android:id="@+id/psam_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    
+	</ScrollView>
+    
+    
+    <Button 
+        android:text="@string/power_on"
+        android:id="@+id/powerOn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    
+    <Button 
+        android:text="@string/apdu"
+        android:id="@+id/apdu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    
+    
+    <Button 
+        android:text="@string/power_off"
+        android:id="@+id/powerOff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

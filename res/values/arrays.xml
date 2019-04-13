@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- uart list -->
+    <string-array name="uart_list">
+        <item>/dev/ttyHSL0</item>
+        <item>/dev/ttyHSL1</item>
+        <item>/dev/ttyHSL2</item>
+        <item>/dev/ttyS1</item>
+        <item>/dev/ttyS2</item>
+        <item>/dev/ttyS3</item>
+    </string-array>
+    <!-- baudrate list -->
+    <string-array name="baudrate_list">
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>57600</item>
+        <item>115200</item>
+        <item>230400</item>
+        <item>460800</item>
+    </string-array>
+    <!-- show format -->
+    <string-array name="format_list">
+        <item>Txt格式显示</item>
+        <item>十进制显示</item>
+        <item>十六进制显示</item>
+        <item>二进制显示</item>
+    </string-array>
+    
+    
+    <string-array name="baudrates_name">
+        <item>50</item>
+        <item>75</item>
+        <item>110</item>
+        <item>134</item>
+        <item>150</item>
+        <item>200</item>
+        <item>300</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>1800</item>
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>57600</item>
+        <item>115200</item>
+        <item>230400</item>
+        <item>460800</item>
+        <item>500000</item>
+        <item>576000</item>
+        <item>921600</item>
+        <item>1000000</item>
+        <item>1152000</item>
+        <item>1500000</item>
+        <item>2000000</item>
+        <item>2500000</item>
+        <item>3000000</item>
+        <item>3500000</item>
+        <item>4000000</item>
+    </string-array>
+    
+    <string-array name="baudrates_value">
+        <item>50</item>
+        <item>75</item>
+        <item>110</item>
+        <item>134</item>
+        <item>150</item>
+        <item>200</item>
+        <item>300</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>1800</item>
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>57600</item>
+        <item>115200</item>
+        <item>230400</item>
+        <item>460800</item>
+        <item>500000</item>
+        <item>576000</item>
+        <item>921600</item>
+        <item>1000000</item>
+        <item>1152000</item>
+        <item>1500000</item>
+        <item>2000000</item>
+        <item>2500000</item>
+        <item>3000000</item>
+        <item>3500000</item>
+        <item>4000000</item>
+    </string-array>
+    
+    
+    <string-array name="arr_lockType">
+        <item>Open</item>
+        <item>Lock</item>
+        <item>Open forever</item>
+        <item>Lock forever</item>
+    </string-array>
+    <string-array name="arr_sensitivity">
+        <item>High</item>
+        <item>Mid</item>
+        <item>Low</item>
+        <item>Very Low</item>
+    </string-array>
+    <string-array name="arr_area">
+        <item>China2</item>
+        <item>USA</item>
+        <item>Europe</item>
+        <item>China1</item>
+        <item>Korea</item>
+    </string-array>
+
+</resources>
