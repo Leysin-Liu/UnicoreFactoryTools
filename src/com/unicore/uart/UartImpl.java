@@ -35,17 +35,17 @@ public abstract class UartImpl extends UartWrapper{
 	@Override
 	public int open() {
 		if(parameter == null){
-			onError(Error.PARAMETER_IS_NULL, "open:Parameter is null");
+			onException(Error.PARAMETER_IS_NULL,new NullPointerException("Parameter is null"));
 			return Error.PARAMETER_IS_NULL;
 		}
 		try {
 			mSerialPort = new SerialPort
 					(new File(parameter.getUartPath()),parameter.getBaudrate(), 0);
 		} catch (SecurityException e) {
-			onError(Error.SECURITY_EXCEPTION, e.getMessage());
+			onException(Error.SECURITY_EXCEPTION, e);
 			return Error.SECURITY_EXCEPTION;
 		} catch (IOException e) {
-			onError(Error.IO_EXCEPTION, e.getMessage());
+			onException(Error.IO_EXCEPTION, e);
 			return Error.IO_EXCEPTION;
 		}
 		mOutputStream = mSerialPort.getOutputStream();
@@ -72,7 +72,7 @@ public abstract class UartImpl extends UartWrapper{
 				mInputStream = null;
 			}
 		} catch (IOException e) {
-			onError(Const.Error.IO_EXCEPTION,e.getMessage());
+			onException(Const.Error.IO_EXCEPTION,e);
 		}
 		ULog.i(TAG, "close");
 	}
@@ -98,7 +98,7 @@ public abstract class UartImpl extends UartWrapper{
 					//delay 100ms 解决数据两次返回问题
 					SystemClock.sleep(100);
 				} catch (IOException e) {
-					onError(Const.Error.IO_EXCEPTION,e.getMessage());
+					onException(Const.Error.IO_EXCEPTION,e);
 				}
 				try {
 					Arrays.fill(buffer, (byte)0);
@@ -108,7 +108,7 @@ public abstract class UartImpl extends UartWrapper{
 						onDataReceived(buffer,size);
 					}
 				} catch (IOException e1) {
-					onError(Error.IO_EXCEPTION, e1.getMessage());
+					onException(Error.IO_EXCEPTION, e1);
 				}
 			}
 		}

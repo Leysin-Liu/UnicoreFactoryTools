@@ -68,6 +68,11 @@ package com.unicore.uart;
 		 * RFID power enable
 		 */
 		public static final String RFID_PWR_EN = "sys/devices/soc.0/slm753_dev.70/rfid_pwr_en";
+		
+		/**
+		 * NFC POWER Enable
+		 */
+		public static final String NFC_PWR_EN = "sys/devices/soc.0/slm753_dev.70/nfc_pwr_en";
 	}
 	
 	public static interface Cmd{

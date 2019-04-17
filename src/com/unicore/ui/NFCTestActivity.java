@@ -8,6 +8,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.unicore.tools.R;
+import com.unicore.uart.Const;
+import com.unicore.uart.GPIOUtils;
 import com.unicore.utils.NFCUtils;
 import com.unicore.utils.ULog;
 
@@ -20,6 +22,7 @@ public class NFCTestActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		GPIOUtils.writeValueToNode(Const.Path.NFC_PWR_EN, GPIOUtils.HIGH);
 	}
 
 	@Override
@@ -60,6 +63,12 @@ public class NFCTestActivity extends BaseActivity {
 					}
 				});
 			}
+	}
+	
+	@Override
+	protected void onDestroy() {
+		GPIOUtils.writeValueToNode(Const.Path.NFC_PWR_EN, GPIOUtils.LOW);
+		super.onDestroy();
 	}
 
 	@Override

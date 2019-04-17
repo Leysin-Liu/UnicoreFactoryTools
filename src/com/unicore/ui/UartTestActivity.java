@@ -1,6 +1,5 @@
 package com.unicore.ui;
 
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.Timer;
@@ -82,6 +81,8 @@ public class UartTestActivity extends BaseActivity implements UartListener{
 		formatSpinner.setSelection(mUartEntity.getFormatIndex(),true);
 		sendText = (String) SPUtils.get(mContext, Constant.SEND_CONTENT, Constant.TEST_TEXT);
 		sendMsg.setText(sendText);
+		initSerialPort(uartList[mUartEntity.getUartPathIndex()], 
+				Integer.valueOf(baudrateList[mUartEntity.getBaudrateIndex()]));
 	}
 
 	@Override
@@ -97,8 +98,6 @@ public class UartTestActivity extends BaseActivity implements UartListener{
 		baudrateList = getResources().getStringArray(R.array.baudrate_list);
 		uartList =  getResources().getStringArray(R.array.uart_list);
 		setFormat(mUartEntity.getFormatIndex());
-		initSerialPort(uartList[mUartEntity.getUartPathIndex()], 
-				Integer.valueOf(baudrateList[mUartEntity.getBaudrateIndex()]));
 	}
 
 	private void initSerialPort() {
@@ -295,8 +294,7 @@ public class UartTestActivity extends BaseActivity implements UartListener{
 		mStringBuffer.append(result);
 		receivedData.setText("");
 		receivedData.setText(mStringBuffer);
-		mHandler.post(new Runnable() {
-			
+		new Handler().post(new Runnable() {
 			@Override
 			public void run() {
 				mScrollView.fullScroll(ScrollView.FOCUS_DOWN);
@@ -408,7 +406,7 @@ public class UartTestActivity extends BaseActivity implements UartListener{
 
 	@Override
 	public void onError(int errorCode, String errorStr) {
-		showContent("Excption:" + errorStr + "\n");
+			showContent("Excption:" + errorStr + "\n");
 	}
 
 }

@@ -78,7 +78,9 @@ public class PsamTestActivity extends BaseActivity{
 			}
 			@Override
 			public void onDataRead(byte[] data) {
-				showContent(items[psamItem] + "-read:" + DataConvert.bytesToHexString(data) + "\n");
+				long endTime = System.currentTimeMillis() - startTime;
+				showContent(items[psamItem] + "-read:" + 
+				DataConvert.bytesToHexString(data) + "\n" + "time:" + endTime + "ms" + "\n");
 			}
 		});
 		mHelper.open();
@@ -171,9 +173,11 @@ public class PsamTestActivity extends BaseActivity{
 		});
 	}
 	
+	long startTime = 0;
 	public void sendCMD(byte[] cmd){	
 		if(mHelper != null && mHelper.isWritable()){
 			mHelper.sendDataToUart(cmd);
+			startTime = System.currentTimeMillis();
 		}
 	}
 	

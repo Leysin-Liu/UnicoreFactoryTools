@@ -1,7 +1,9 @@
 package com.unicore.uart;
 
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.PrintStream;
 
 
 /**
@@ -13,8 +15,8 @@ public abstract class UartWrapper implements Uart{
 	
 	public InputStream mInputStream = null;
 	public OutputStream mOutputStream = null;
-	public UartParameter parameter;
-	public UartListener listener;
+	public UartParameter parameter = null;
+	public UartListener listener = null;
 	
 	@Override
 	public void setParameter(UartParameter parameter) {
@@ -38,6 +40,26 @@ public abstract class UartWrapper implements Uart{
 		if(listener != null){
 			listener.onDataRead(data);
 		}
+	}
+	
+	public void onException(int errCode,Exception e){
+		// Exception e;
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		PrintStream pout = new PrintStream(out);
+		e.printStackTrace(pout);
+		String ret = new String(out.toByteArray());
+		pout.close();
+		try {
+		    out.close();
+		} catch (Exception ex) {
+		    ex.printStackTrace();
+		}
+		if(ret == null || ret.isEmpty()){
+			onError(errCode,"Exception");
+		}else{
+			onError(errCode, ret);
+		}
+		
 	}
 	
 	@Override
